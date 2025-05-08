@@ -1,77 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
- 
-    margin: 0;
-    padding: 0;
-    align-items: normal;
-    /* background: url('jobs.jpg') no-repeat center center fixed ; */
-    background-image:  url('jobs.jpg');
-    
-  }
-  
-  .container {
-    max-width: 30%;
-    max-height: 5%;
-    margin: 40px auto;
-    padding: 1%;
-    color: white;
-    background: rgb(185, 221, 93);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border-radius: 1px;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .profile-photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff9900;
-    margin-bottom: 20px;
-  }
-  
-  .job-card h2 {
-    margin: 15px 0 10px;
-    color: #232f3e;
-  }
-  
-  .job-card p {
-    font-size: 16px;
-    margin: 5px 0 20px;
-  }
-  
-  .job-image {
-    max-width: 50%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .apply-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    
-  }
-  
-  .apply-btn:hover {
-    background-color: #e68a00;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('jobs.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-  /*=============================================*/
+/* Container for each job card */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgb(185, 221, 93);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+}
 
-  /* Date header */
-.date-header {
+/* Job Cards */
+.job-card h2 {
+  margin: 15px 0 10px;
+  color: #232f3e;
+}
+
+.job-card p {
+  font-size: 16px;
+  margin: 5px 0 10px;
+}
+
+/* Job image */
+.job-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Apply buttons */
+.apply-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.apply-btn:hover {
+  background-color: #e68a00;
+}
+
+/* Main Heading */
+.main-heading {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+.main-heading h3 {
+  font-size: 24px;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.main-heading h3 i {
+  color: #1565c0;
+  margin-right: 10px;
+}
+
+.sub-text {
   font-size: 18px;
-  margin-bottom: -2%;
+  color: #1b5e20;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Date Header */
+.date-header {
+  font-size: 16px;
+  margin: 10px auto;
   color: #f1190e;
   font-weight: bold;
   text-align: center;
   background-color: rgb(48, 223, 21);
+  padding: 5px;
+  width: 100%;
+  max-width: 90%;
+  border-radius: 8px;
 }
 
 .date-header i {
@@ -79,44 +108,71 @@ body {
   margin-right: 8px;
 }
 
+/* Down arrow image */
+.down {
+  height: 24px;
+  width: 24px;
+  margin-top: 10px;
+}
 
-  /*=============================================*/
-  /* Main-Heading */
+/* Profile image (if used) */
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff9900;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .main-heading {
-    background: linear-gradient(to right, #e3f2fd, #bbdefb);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    margin: 20px auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 30%;
-    max-height: 10%;
+    padding: 15px;
   }
-  .down{
-    height: 7%;
-    width: 10%;
-  }
-  
+
   .main-heading h3 {
-    font-size: 28px;
-    color: #0d47a1;
-    margin-bottom: 10px;
-  }
-  
-  .main-heading h3 i {
-    color: #1565c0;
-    margin-right: 10px;
-  }
-  
-  .sub-text {
     font-size: 20px;
-    color: #1b5e20;
-    margin-bottom: 5px;
-    font-weight: 500;
   }
-  
-  .info-text {
+
+  .sub-text {
     font-size: 16px;
-    color: #333;
   }
-  
+
+  .info-text {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 15px 10px;
+  }
+
+  .apply-btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .date-header {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .job-card h2 {
+    font-size: 18px;
+  }
+
+  .job-card p {
+    font-size: 14px;
+  }
+
+  .job-image {
+    max-width: 100%;
+  }
+
+  .down {
+    width: 20px;
+    height: 20px;
+  }
+}
