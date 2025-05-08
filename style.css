@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+ 
+    margin: 0;
+    padding: 0;
+    align-items: normal;
+    /* background: url('jobs.jpg') no-repeat center center fixed ; */
+    background-image:  url('jobs.jpg');
+    
+  }
+  
+  .container {
+    max-width: 30%;
+    max-height: 5%;
+    margin: 40px auto;
+    padding: 1%;
+    color: white;
+    background: rgb(185, 221, 93);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 1px;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff9900;
+    margin-bottom: 20px;
+  }
+  
+  .job-card h2 {
+    margin: 15px 0 10px;
+    color: #232f3e;
+  }
+  
+  .job-card p {
+    font-size: 16px;
+    margin: 5px 0 20px;
+  }
+  
+  .job-image {
+    max-width: 50%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    
+  }
+  
+  .apply-btn:hover {
+    background-color: #e68a00;
+  }
+
+  /*=============================================*/
+
+  /* Date header */
+.date-header {
+  font-size: 18px;
+  margin-bottom: -2%;
+  color: #f1190e;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(48, 223, 21);
+}
+
+.date-header i {
+  color: #ff9800;
+  margin-right: 8px;
+}
+
+
+  /*=============================================*/
+  /* Main-Heading */
+  .main-heading {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    max-height: 10%;
+  }
+  .down{
+    height: 7%;
+    width: 10%;
+  }
+  
+  .main-heading h3 {
+    font-size: 28px;
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  
+  .main-heading h3 i {
+    color: #1565c0;
+    margin-right: 10px;
+  }
+  
+  .sub-text {
+    font-size: 20px;
+    color: #1b5e20;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .info-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
