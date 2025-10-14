@@ -7,18 +7,34 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- background-image:  url('jobs.jpg');
+  
+ /* background-image:  url('jobs.jpg'); */
     
 }
-
+a{
+  color: black;
+}
+    /* Text Content Styling */
+        .item-content {
+            flex-grow: 1; /* Allows the text to take up most of the space */
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 600; /* Make the text bold like in the image */
+        }
 /* Responsive Container */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   margin: 20px auto;
+  background-color: #35706d;
+   padding: 90px;
   
 }
+.card-details{
+  background-color: #fed6e3;
 
+}
+ 
 /* Main Heading */
 .main-heading {
   background: linear-gradient(to right, #a8edea, #fed6e3);
@@ -50,75 +66,54 @@ body {
   text-align: center;
   padding: 10px;
   color: #ffffff;
-  background-color: #28a745;
+  background-color: #a79a28;
   font-weight: bold;
   margin-bottom: 10px;
 }
+ /* The Card/List Item Style (Clean Bordered Look) */
+        .list-item {
+            display: flex;
+            align-items: center;
+            /* White background for the card */
+            background-color: #ffffff;
+            /* Subtle box shadow for the lift effect */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            /* Rounded corners for the card */
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            /* Optional: transition for hover effect */
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative; /* For the three dots menu */
+        }
 
-/* Job Cards */
-.job-card {
-  background: #c0e87b;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 16px;
-  margin-bottom: 20px;
-  text-align: center;
-  overflow: hidden;
-}
+        .list-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.job-card h2 {
-  color: #333;
-  font-size: 18px;
-  margin: 12px 0;
-}
+        /* Image/Icon Styling (TCS NQT Logo Area) */
+        .item-icon {
+            width: 45px; /* Fixed size for the icon container */
+            height: 45px;
+            margin-right: 15px;
+            border-radius: 5px; /* Slight rounding for the logo container */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f7f7f7; /* Light background if image is small */
+        }
 
-.job-card p {
-  font-size: 14px;
-  color: #444;
-  margin: 6px 0;
-}
-
-.job-image {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 12px;
-}
-
-/* Buttons */
-.apply-btn {
-  display: block;
-  background: #ff9900;
-  color: white;
-  font-weight: bold;
-  padding: 10px 0;
-  margin: 10px 0;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.apply-btn:hover {
-  background: #e68a00;
-}
-
-/* Watch Video Button */
-.apply-btn.video {
-  background-color: #007bff;
-}
-
-.apply-btn.video:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive Image */
-.down {
-  width: 40px;
-  height: auto;
-  margin-top: 10px;
-}
-
+        .item-icon img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+        
+  
 /* Media Queries */
 @media (min-width: 768px) {
   .container {
