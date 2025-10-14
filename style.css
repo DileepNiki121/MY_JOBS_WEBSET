@@ -27,8 +27,7 @@ a{
   max-width: 600px;
   margin: 20px auto;
   background-color: #35706d;
-   padding: 30px;
-  
+   padding: 100px;
   
 }
 .card-details{
@@ -81,7 +80,7 @@ a{
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             /* Rounded corners for the card */
             border-radius: 10px;
-            padding: 15px 20px;
+            padding: 10px 10px;
             margin-bottom: 12px;
             cursor: pointer;
             /* Optional: transition for hover effect */
@@ -129,4 +128,3 @@ a{
     font-size: 22px;
   }
 }
-
