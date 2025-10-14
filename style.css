@@ -95,8 +95,8 @@ a{
 
         /* Image/Icon Styling (TCS NQT Logo Area) */
         .item-icon {
-            width: 45px; /* Fixed size for the icon container */
-            height: 45px;
+            width: 150px; /* Fixed size for the icon container */
+            height: 80px;
             margin-right: 15px;
             border-radius: 5px; /* Slight rounding for the logo container */
             overflow: hidden;
@@ -107,7 +107,7 @@ a{
         }
 
         .item-icon img {
-            max-width: 100%;
+            max-width: 200%;
             max-height: 100%;
             display: block;
             object-fit: contain;
