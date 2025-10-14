@@ -27,7 +27,8 @@ a{
   max-width: 600px;
   margin: 20px auto;
   background-color: #35706d;
-   padding: 90px;
+   padding: 30px;
+  
   
 }
 .card-details{
@@ -128,3 +129,4 @@ a{
     font-size: 22px;
   }
 }
+
