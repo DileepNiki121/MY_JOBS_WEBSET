@@ -27,7 +27,7 @@ a{
   max-width: 600px;
   margin: 20px auto;
   background-color: #35706d;
-   padding: 100px;
+   padding: 15px;
   
 }
 .card-details{
@@ -80,7 +80,7 @@ a{
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             /* Rounded corners for the card */
             border-radius: 10px;
-            padding: 10px 10px;
+            padding:10px;
             margin-bottom: 12px;
             cursor: pointer;
             /* Optional: transition for hover effect */
@@ -95,7 +95,7 @@ a{
 
         /* Image/Icon Styling (TCS NQT Logo Area) */
         .item-icon {
-            width: 150px; /* Fixed size for the icon container */
+            width: 120px; /* Fixed size for the icon container */
             height: 80px;
             margin-right: 15px;
             border-radius: 5px; /* Slight rounding for the logo container */
