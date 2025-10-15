@@ -12,7 +12,8 @@ body {
     
 }
 a{
-  color: rgb(23, 22, 22);
+  color: rgb(5, 5, 5);
+  text-decoration: none; /* This is the key property to remove the underline */
 }
     /* Text Content Styling */
         .item-content {
