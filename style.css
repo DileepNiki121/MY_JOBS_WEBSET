@@ -184,8 +184,9 @@ a{
 
 /* --- Navigation Links (Home, About, etc.) --- */
 .nav-links {
+    margin-bottom: 9px;
      border-radius: 4px;
-    background-color: #d2dc3c;
+    background-color: #323502;
     display: flex;
     align-items: center;
     gap: 0; /* Removing gap here as links are tight in the example */
@@ -211,7 +212,7 @@ a{
     border-radius:20px;
 }
 .nav-link-item:hover {
-    background-color: #c49c4b; 
+    background-color: #e89f0d; 
 }
 
 .nav-link-item i {
@@ -227,37 +228,50 @@ a{
 
 .search-input {
     border: none;
-    padding: 8px 10px;
+    /* padding: 8px 10px; */
     outline: solid;
-    width: 100px; /* Adjust search box width */
+    width:  100px; /* Adjust search box width */
     font-size:1em;
-    height: 5%;
-    border-radius: 10px;
+    
+    border-radius: px;
     /* margin-right: 1px; */
-    margin-left: 1px;
+    margin-left: -3px;
+     flex-grow: 1; /* Input takes up most of the space */
+    padding: 8px 10px;
+    font-size: 16px;
+    
+    background-color: #dadada;
+    color: #000000;
+    outline: none;
+    border-radius: 9%;
+
+     
 }
 
 .search-btn {
-    border: none;
-    background-color: #c208bf; /* Darker blue button */
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    cursor: pointer;
-    width: 90px;
-    margin: 0%;
-    height: 3%;
-    margin-left: 1%;
-    border-radius: 10px;
-    
+     
+    height: 34px; 
+    padding: 5px;  
+     border-radius: 10px;
+     margin-left: -20px;
+     background-color: #000000;
+     color: #f0f8ff;
+     
  
+  
 }
+ 
+ 
+ 
 
 .search-btn:hover {
-    background-color: #98c44b;
+    background-color: #618523;
 }
 
 
 
+
+ 
  
 /* ============================================== */
 /* === RESPONSIVE STYLES (For Mobile Devices) === */
@@ -278,41 +292,45 @@ a{
         
         /* Positioning the dropdown to the right corner */
         position: absolute; 
-        top: 45px; /* Adjust this to sit right below the top bar */
+        top: 0px; /* Adjust this to sit right below the top bar */
         right: 0; /* Aligns the dropdown to the right edge */
-        
+        height: -10px;
         width: 300px; /* **Gives it a fixed width for the "side buttons" look** */
         
-        z-index: 100; 
+        z-index: 1; 
         background-color: #337ab7; /* Blue color for the dropdown */
-        border-radius: 4px;
+        border-radius: px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         
     }
 
     /* 3. SHOW THE MENU WHEN THE .active CLASS IS ADDED */
     #mobile-menu-items.active {
-        display: block; /* Shows the dropdown */
+        display: block;  
+        
+        
     }
     
 
     /* 4. Ensure the links stack vertically */
     .nav-links {
+       
         flex-direction: column; 
         align-items: flex-start;
         padding: 10px;
-        background-color: #22221e;
+        background-color: #0d0d0d;
     }
 
     /* 5. Make each link look like a full-width button in the dropdown */
     .nav-link-item {
-        width: 100%;
+        width:900px;
         padding: 10px 15px;
-        margin-bottom: 5px;
+        margin-bottom:10px;
+        margin-left: -3px;
         text-align: left;
         background-color: #e9ed09; /* Darker blue button look */
         border-radius: 8px;
-        color: #000;
+        color: #080808;
         
         
     }
@@ -325,7 +343,7 @@ a{
     font-weight: 500;
     padding: 10px 0;
     transition: color 0.3s ease;
-    margin: 5px;
+    margin: 10px;
  
     }
 }
@@ -340,7 +358,7 @@ a{
     margin: 25px 0; 
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(151, 85, 85, 0.1);
     border: 1px solid #ccc; /* Subtle border for clean separation */
 }
 
@@ -405,6 +423,47 @@ a{
 }
 
 
+/* 6. Bank & Financial Sector Jobs (Bank-Section) */
+.bank-section {
+    background-color: #f0ffff; /* Azure/Pale Blue background */
+    border-color: #007bff; /* Bright Blue border */
+}
+.bank-section .section-title {
+    background-color: #007bff; /* Bright Blue heading background */
+    color: white; /* Make the text white for contrast */
+}
+
+/* ---------------------------------------------------- */
+/* --- Consistent Job Listing Item Styling for BANK --- */
+/* ---------------------------------------------------- */
+
+/* Ensure the list items within the bank section are clearly defined */
+.bank-section .list-item {
+    /* Use white background for the individual list item */
+    background-color: #ffffff;
+    /* Use a contrasting border based on the section color, but thinner */
+    border: 1px solid #cce5ff; 
+    border-left: 5px solid #ffc107; /* Gold/Yellow prominent left border */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure the link text inside the bank job list is readable */
+.bank-section .list-item a {
+    color: #333; /* Default dark text color for readability */
+}
+
+.bank-section .list-item a strong {
+    color: #1e1f20; /* Darker blue for emphasis on the job title */
+}
+
+.bank-section .list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* --- Ensure the Job Listing Items Look Good Inside the Container --- */
 .job-section-container .list-item {
     background-color: #ffffff; /* Keep individual item background white */
@@ -464,4 +523,20 @@ a{
     flex-direction: column; /* Stack icons vertically */
     gap: 6px; /* Space between icons */
     z-index: 999; /* Ensures they appear above your content */
+}
+
+
+ .scroll-to-top-btn{
+    border: none;
+  padding: 10px 10px 10px 7px;
+  margin-top: 1px;
+  margin-left: 1px;
+  background-color: #e019dd;
+  color: rgb(247, 247, 247);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+max-width: 50px;
 }
