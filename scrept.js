@@ -2,72 +2,60 @@ const container = document.getElementById('container');
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 
-signUpButton.addEventListener('click', () => {
-  container.classList.add("right-panel-active");
-});
+ 
 
-signInButton.addEventListener('click', () => {
-  container.classList.remove("right-panel-active");
-});
 
- // Function to open/close the menu (called by the "More Info" button)
-function toggleMobileMenu() {
-    const menuItems = document.getElementById('mobile-menu-items');
-    menuItems.classList.toggle('active'); // Toggles the CSS class
-}
+   // This function will run every time the "More Info" button is clicked
+    function toggleMobileMenu() {
+        // 1. Get the element that holds the hidden links (Home, About, Search, etc.)
+        const menuItems = document.getElementById('mobile-menu-items');
+        
+        // 2. The magic step: toggle the 'active' class on and off.
+        // If the menu has the 'active' class, it removes it (hides the menu).
+        // If it does NOT have the 'active' class, it adds it (shows the menu).
+        menuItems.classList.toggle('active');
+    }
+ 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Select all navigation links inside the mobile menu.
-    document.querySelectorAll('#mobile-menu-items .nav-link-item').forEach(link => {
+    document.addEventListener('DOMContentLoaded', () => {
+    // Select all navigation links that should trigger the scroll/highlight
+    document.querySelectorAll('.nav-link-item').forEach(link => {
         link.addEventListener('click', function(e) {
-            
+            // 1. Stop the browser's default jump behavior
+            e.preventDefault(); 
+
+            // Get the target section ID (e.g., '#jobs-section' from the link's href)
             const targetId = this.getAttribute('href');
-            
-            // 💥 FIX 1: CLOSE THE MENU FIRST (Always executed on link click)
-            const menuItems = document.getElementById('mobile-menu-items');
-            if (menuItems && menuItems.classList.contains('active')) {
-                // This removes the 'active' class to close the menu immediately.
-                menuItems.classList.remove('active');
-            }
-            // ------------------------------------------------------------
-            
-            // 💥 FIX 2: ONLY APPLY preventDefault, scroll, and highlight 
-            // TO INTERNAL HASH LINKS (which start with #)
-            if (targetId && targetId.startsWith('#')) {
-                e.preventDefault(); 
-                const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
-                    
-                    // ACTION 2: Smoothly scroll to the target section
-                    targetElement.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-
-                    // ACTION 3 & 4: Highlight the section for 5 seconds
-                    targetElement.classList.add('highlight-flash');
-                    
-                    setTimeout(() => {
-                        targetElement.classList.remove('highlight-flash');
-                    }, 5000); 
+            // Check if the target element exists on the page
+            if (targetElement) {
+                
+                // --- 💥 NEW CODE ADDED HERE: Auto-Close Menu ---
+                const menuItems = document.getElementById('mobile-menu-items');
+                if (menuItems && menuItems.classList.contains('active')) {
+                    // Remove the 'active' class to close the menu automatically
+                    menuItems.classList.remove('active');
                 }
+                // ------------------------------------------------
+                
+                // 2. Smoothly scroll to the target section
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' // Scrolls so the section starts at the top of the viewport
+                });
+
+                // 3. Add the highlight class immediately
+                targetElement.classList.add('highlight-flash');
+
+                // 4. Remove the highlight class after 5000 milliseconds (5 seconds)
+                setTimeout(() => {
+                    targetElement.classList.remove('highlight-flash');
+                }, 5000); 
             }
-            // If the link is not a hash link (like an external link), 
-            // the menu is already closed, and the browser follows the link normally.
         });
     });
-    
-    // IMPORTANT: Also add an event listener for the Search button inside the menu 
-    // to close the menu after the user clicks Search.
-    document.querySelector('#mobile-menu-items .search-btn')?.addEventListener('click', function(e) {
-        const menuItems = document.getElementById('mobile-menu-items');
-        if (menuItems && menuItems.classList.contains('active')) {
-            menuItems.classList.remove('active');
-        }
-    });
 });
-
 
 // Function to handle the smooth scroll when the button is clicked
 function scrollToTop() {
