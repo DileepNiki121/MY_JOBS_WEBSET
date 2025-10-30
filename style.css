@@ -47,7 +47,8 @@ a{
   margin-bottom: 13px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding-top: 2px;
-  gap:20px;;
+  gap:20px;
+  margin-left: 12px;
 }
 
 .main-heading h3 {
@@ -294,10 +295,10 @@ a{
         position: absolute; 
         top: 0px; /* Adjust this to sit right below the top bar */
         right: 0; /* Aligns the dropdown to the right edge */
-        height: -10px;
+        height: 10px;
         width: 150px; /* **Gives it a fixed width for the "side buttons" look** */
         
-        z-index: 100; 
+        z-index:100; 
         background-color: #337ab7; /* Blue color for the dropdown */
         border-radius: px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -337,7 +338,7 @@ a{
     
     /* 6. Style the search bar in the dropdown */
     .nav-search-container {
-       color: #b62890; /* Light gray for subtle look */
+       color: #9e7794; /* Light gray for subtle look */
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -515,9 +516,9 @@ a{
     position: fixed; /* Keeps them visible regardless of scroll */
     
     
-    top:16px; 
+    top:1px; 
     
-    right:3px; /* Aligns them to the right edge */
+    
     
     display: flex;
     flex-direction: column; /* Stack icons vertically */
@@ -540,4 +541,3 @@ a{
   width: 100%;
 max-width: 50px;
 }
-
