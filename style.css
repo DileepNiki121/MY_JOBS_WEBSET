@@ -587,7 +587,8 @@ a{
     position: fixed; /* Keeps them visible regardless of scroll */
     
     
-    top:1px; 
+    /* top:0px;  */
+    bottom:10px;
     
     
     
@@ -612,3 +613,4 @@ a{
   width: 100%;
 max-width: 50px;
 }
+
